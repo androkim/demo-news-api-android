@@ -1,0 +1,65 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.andronicuskim.newsapp.login.LoginFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp150"
+        android:layout_marginBottom="@dimen/dp10"
+        android:gravity="center"
+        android:text="News App"
+        style="@style/LoginTextColor"
+        android:textSize="@dimen/sp30"/>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_email"
+        android:layout_below="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            style="@style/LoginTextColor"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sp15"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_password"
+        android:layout_below="@+id/til_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sp15"
+            android:inputType="textPassword"
+            />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_below="@+id/til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        style="@style/LoginTextColor"
+        />
+    </RelativeLayout>
+
+</ScrollView>
